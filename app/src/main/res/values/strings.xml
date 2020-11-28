@@ -20,4 +20,16 @@
     <string name="attachment_title">Download incoming attachments</string>
     <string name="attachment_summary_on">Automatically download attachments for incoming emails</string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <string name="hint_email">hit邮箱</string>
+    <string name="hint_password">密码</string>
+    <string name="button_text_login">登录</string>
+    <string name="button_text_register">注册</string>
+    <string name="button_text_forget_password">忘记密码</string>
+    <string name="mail_suffix_teacher">\@hit.edu.cn</string>
+    <string name="email_suffix_student">\@stu.hit.edu.cn</string>
+    <string name="hint_repeat_password">重复密码</string>
+    <string name="button_text_confirm">确定</string>
+    <string name="button_text_get_verification_code">获取验证码</string>
+    <string name="hint_verification_code">验证码</string>
 </resources>

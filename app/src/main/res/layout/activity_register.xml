@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mailTypeSecletionRadioGroup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <EditText
+        android:id="@+id/editTextTexEmailAddressRegister"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:ems="10"
+        android:hint="@string/hint_email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintStart_toStartOf="@+id/editTextTexEmailAddressRegister"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTexEmailAddressRegister">
+
+        <RadioButton
+            android:id="@+id/radioButtonTeacherMail"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="@string/mail_suffix_teacher" />
+
+        <RadioButton
+            android:id="@+id/radioButtonStudentMail"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/email_suffix_student" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editTextTextPasswordRegister"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/hint_password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTexEmailAddressRegister"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextTexEmailAddressRegister"
+        app:layout_constraintTop_toBottomOf="@+id/verificationCodeEditTextNumber" />
+
+    <EditText
+        android:id="@+id/editTextTextPasswordRegisterRepeat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/hint_repeat_password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPasswordRegister"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPasswordRegister"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPasswordRegister" />
+
+    <Button
+        android:id="@+id/confirmButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/button_text_confirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPasswordRegisterRepeat" />
+
+    <EditText
+        android:id="@+id/verificationCodeEditTextNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/hint_verification_code"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/editTextTexEmailAddressRegister"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <Button
+        android:id="@+id/getVerificationCodeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_text_get_verification_code"
+        app:layout_constraintBaseline_toBaselineOf="@+id/verificationCodeEditTextNumber"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTexEmailAddressRegister" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
