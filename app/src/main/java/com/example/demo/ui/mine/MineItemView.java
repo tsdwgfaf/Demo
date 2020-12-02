@@ -33,30 +33,13 @@ public class MineItemView extends RelativeLayout {
         if (typedArray.getBoolean(R.styleable.MineItemView_mine_line, false)) {
             line.setBackgroundColor(getResources().getColor(R.color.light_gray));
         }
-        this.setOnTouchListener(new View.OnTouchListener(){
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                switch (event.getAction()) {
-                    case MotionEvent.ACTION_DOWN: {
-                        relativeLayout.setBackgroundColor(getResources().getColor(R.color.gray));
-                        break;
-                    }
-                    case MotionEvent.ACTION_MOVE: {
-                        break;
-                    }
-                    case MotionEvent.ACTION_UP: {
-                        relativeLayout.setBackgroundColor(getResources().getColor(R.color.white));
-                        if (textView.getText().toString().compareTo("设置") == 0) {
-
-                        }
-                        break;
-                    }
-                    default:
-                        break;
-                }
-                return true;
-            }
-        });
         typedArray.recycle();
+    }
+
+    public void TouchDown() {
+        relativeLayout.setBackgroundColor(getResources().getColor(R.color.gray));
+    }
+    public void TouchUp() {
+        relativeLayout.setBackgroundColor(getResources().getColor(R.color.white));
     }
 }
