@@ -1,10 +1,12 @@
 package com.example.demo.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -33,9 +35,14 @@ public class CourseChatActivity extends AppCompatActivity {
         msgRecyclerView.setLayoutManager(linearLayoutManager);
         this.adapter = new MsgAdapter(this.msgList);
         msgRecyclerView.setAdapter(this.adapter);
+        //隐藏系统自带的标题栏
+        ActionBar actionbar = getSupportActionBar();
+        if (actionbar != null) {
+            actionbar.hide();
+        }
     }
 
-    //点击按钮后发送消息
+    //点击发送按钮后发送消息
     public void sendMsg(View v) {
         TextView textView = findViewById(R.id.msgTextView);
         String content = textView.getText().toString(); // 获取消息
@@ -46,6 +53,17 @@ public class CourseChatActivity extends AppCompatActivity {
             msgRecyclerView.scrollToPosition(this.msgList.size() - 1); // 将ListView定位到最后一行
             textView.setText(""); // 清空输入框
         }
+    }
+
+    //点击返回按钮，关闭当前Activity
+    public void back(View view) {
+        this.finish();
+    }
+
+    //点击菜单，打开课程菜单
+    public void toCourseMenu(View view) {
+        Intent intent = new Intent(this, CourseMenuActivity.class);
+        startActivity(intent);
     }
 
     private void initMsg() {
