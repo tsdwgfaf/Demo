@@ -1,57 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/mine_item_view"
+    android:id="@+id/mine_root"
     android:layout_width="match_parent"
-    android:layout_height="51dp"
-    android:background="@color/light_gray"
+    android:layout_height="50dp"
+    android:background="@color/white"
     xmlns:tools="http://schemas.android.com/tools">
     <RelativeLayout
-        android:id="@+id/mine_root"
-        android:background="@color/white"
-        android:layout_width="match_parent"
+        android:id="@+id/icon_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_width="50dp"
         android:layout_height="50dp">
 
-        <RelativeLayout
-            android:id="@+id/icon_layout"
-            android:layout_alignParentLeft="true"
-            android:layout_width="50dp"
-            android:layout_height="50dp">
-
-            <ImageView
-                android:id="@+id/mine_icon"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_centerInParent="true"
-                tools:background="@drawable/ic_baseline_settings_24"/>
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_toRightOf="@id/icon_layout">
-
-            <TextView
-                android:id="@+id/mine_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:textSize="18sp"
-                android:textColor="@color/black"
-                tools:text="设置"/>
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_alignParentRight="true"
-            android:layout_width="50dp"
-            android:layout_height="50dp">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="30dp"
-                android:layout_centerInParent="true"
-                android:background="@drawable/arrow_right_24" />
-        </RelativeLayout>
+        <ImageView
+            android:id="@+id/mine_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerInParent="true"
+            tools:background="@drawable/settings_24"/>
     </RelativeLayout>
-</LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49.5dp"
+        android:layout_toRightOf="@id/icon_layout">
+
+        <TextView
+            android:id="@+id/mine_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            tools:text="设置"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="13dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/arrow_right_24" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mine_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_toRightOf="@id/icon_layout"
+        android:layout_alignParentBottom="true">
+    </RelativeLayout>
+
+</RelativeLayout>
