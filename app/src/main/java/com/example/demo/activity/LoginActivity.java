@@ -1,10 +1,12 @@
-package com.example.demo;
+package com.example.demo.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.demo.R;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -23,4 +25,6 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
     }
+
+
 }
