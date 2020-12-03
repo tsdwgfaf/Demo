@@ -4,16 +4,19 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CoursesViewModel extends ViewModel {
 
-    private MutableLiveData<String> mText;
+    private MutableLiveData<List<CourseInfo>> courses;
 
     public CoursesViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is dashboard fragment");
+        courses = new MutableLiveData<>();
+        courses.setValue(new ArrayList<>());
     }
 
-    public LiveData<String> getText() {
-        return mText;
+    public LiveData<List<CourseInfo>> getCourses() {
+        return courses;
     }
 }
