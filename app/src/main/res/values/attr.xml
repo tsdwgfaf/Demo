@@ -3,5 +3,6 @@
     <declare-styleable name="MineItemView">
         <attr name="mine_icon" format="integer" />
         <attr name="mine_text" format="string" />
+        <attr name="mine_line" format="boolean" />
     </declare-styleable>
 </resources>
