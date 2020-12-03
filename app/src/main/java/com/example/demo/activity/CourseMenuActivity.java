@@ -33,6 +33,11 @@ public class CourseMenuActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void toCourseInfoView(View view) {
+        Intent intent = new Intent(this, CourseInformationActivity.class);
+        startActivity(intent);
+    }
+
     public void back(View view) {
         ((Activity) view.getContext()).finish();
     }

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#3ECFCFCF"
     tools:context=".activity.CourseNoticeActivity">
 
     <ImageView
@@ -14,7 +15,7 @@
         android:onClick="back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back" />
+        app:srcCompat="@drawable/ic_back" />
 
     <TextView
         android:id="@+id/textView"

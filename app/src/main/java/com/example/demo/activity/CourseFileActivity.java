@@ -1,6 +1,7 @@
 package com.example.demo.activity;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,6 +36,10 @@ public class CourseFileActivity extends AppCompatActivity {
         if (actionbar != null) {
             actionbar.hide();
         }
+    }
+
+    public void back(View view) {
+        this.finish();
     }
 
     private void initFile() {
