@@ -41,7 +41,6 @@ public class MineHeader extends RelativeLayout {
                         break;
                     }
                     case MotionEvent.ACTION_UP: {
-
                         break;
                     }
                     default:
