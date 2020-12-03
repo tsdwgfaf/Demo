@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.demo.R;
-import com.example.demo.adapter.FileAdapter;
+import com.example.demo.adapter.CourseFileAdapter;
 import com.example.demo.entity.CourseFile;
 
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ import java.util.List;
 public class CourseFileActivity extends AppCompatActivity {
 
     private final List<CourseFile> fileList = new ArrayList<>();
-    private FileAdapter adapter;
+    private CourseFileAdapter adapter;
     private RecyclerView fileRecyclerView;
 
     @Override
@@ -28,7 +28,7 @@ public class CourseFileActivity extends AppCompatActivity {
         fileRecyclerView = findViewById(R.id.recyclerViewInFileView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         fileRecyclerView.setLayoutManager(linearLayoutManager);
-        this.adapter = new FileAdapter(this.fileList);
+        this.adapter = new CourseFileAdapter(this.fileList);
         fileRecyclerView.setAdapter(this.adapter);
         //隐藏系统自带标题栏
         ActionBar actionbar = getSupportActionBar();

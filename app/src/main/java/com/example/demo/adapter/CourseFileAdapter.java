@@ -13,11 +13,11 @@ import com.example.demo.entity.CourseFile;
 
 import java.util.List;
 
-public class FileAdapter extends RecyclerView.Adapter<FileAdapter.FileViewHolder> {
+public class CourseFileAdapter extends RecyclerView.Adapter<CourseFileAdapter.FileViewHolder> {
 
     private final List<CourseFile> fileList;
 
-    public FileAdapter(List<CourseFile> fileList) {
+    public CourseFileAdapter(List<CourseFile> fileList) {
         super();
         this.fileList = fileList;
     }
