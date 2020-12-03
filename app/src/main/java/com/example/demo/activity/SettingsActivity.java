@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.activity;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -14,6 +14,8 @@ import androidx.preference.EditTextPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
+
+import com.example.demo.R;
 
 public class SettingsActivity extends AppCompatActivity {
     @Override

@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.demo.R;
-import com.example.demo.SettingsActivity;
+import com.example.demo.activity.SettingsActivity;
 
 public class MineFragment extends Fragment {
 

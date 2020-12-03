@@ -1,6 +1,7 @@
 package com.example.demo.ui.courses;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -19,6 +21,8 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.example.demo.R;
+import com.example.demo.activity.CourseChatActivity;
+import com.example.demo.activity.SettingsActivity;
 
 import org.w3c.dom.Text;
 
@@ -87,6 +91,13 @@ public class CoursesFragment extends Fragment {
                     swipeRefreshLayout.setEnabled(true);
                 else
                     swipeRefreshLayout.setEnabled(false);
+            }
+        });
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getActivity(), CourseChatActivity.class);
+                startActivity(intent);
             }
         });
         //swipeRefreshLayout.setColorSchemeResources(new int[]{});
