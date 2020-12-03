@@ -22,7 +22,6 @@ public class CourseChatActivity extends AppCompatActivity {
 
     private final List<Msg> msgList = new ArrayList<>();
     private MsgAdapter adapter = null;
-
     private RecyclerView msgRecyclerView;
 
     @Override
@@ -30,7 +29,7 @@ public class CourseChatActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course_chat);
         initMsg();
-        msgRecyclerView = findViewById(R.id.recycler);
+        msgRecyclerView = findViewById(R.id.recyclerViewInCourseView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         msgRecyclerView.setLayoutManager(linearLayoutManager);
         this.adapter = new MsgAdapter(this.msgList);
