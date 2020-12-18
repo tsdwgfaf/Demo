@@ -37,6 +37,7 @@
             android:inputType="textMultiLine"
             android:paddingTop="16dp"
             android:text="TextView"
+            android:textIsSelectable="true"
             android:textSize="16sp" />
     </LinearLayout>
 
